@@ -1,0 +1,14 @@
+
+body { font-family:Verdana; font-size:14px; margin:0;}
+
+#container {margin:0 auto; width:99%;}
+#header { 
+	background: url(img/logo500.png) ;	
+	background-color: #244BC9;
+    background-repeat: no-repeat;
+	
+	height:100px;   margin-bottom:5px;
+}
+#mainContent { margin-bottom:5px;}
+#sidebar { float:left; width:200px; height:500px; background:#9ff;}
+#content {  margin:0 auto; width:99%; background:#cff;}

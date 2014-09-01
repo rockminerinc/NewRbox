@@ -1,0 +1,36 @@
+
+body { font-family:Verdana; font-size:14px; margin:0;}
+
+#container {margin:0 auto; width:99%;}
+#header { 
+	background: #2e7bcf url(../img/header-bg.jpg) 0 0 repeat-x;
+ 
+	padding:20px;
+	
+	   margin-bottom:5px;
+}
+#mainContent { margin-bottom:5px;}
+#sidebar { float:left; width:200px; height:500px;  }
+#content {  
+	height:500px;  
+padding-left:80px;
+padding-top:10px;
+
+margin-left:200px;
+}
+
+
+.WebUI {
+	float: right;
+	padding: 10px;
+
+}
+
+.table th, .table td {
+padding: 8px;
+line-height: 20px;
+text-align: left;
+vertical-align: top;
+border-top: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}

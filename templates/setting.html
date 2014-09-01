@@ -1,0 +1,137 @@
+{{include file="header.html"}}
+ 
+<div id="content"  >
+<p style="text-align:">	 
+		<a href="http://rockhash.com/m/{{$mac}}"  target="_blank">
+			http://rockhash.com/m/{{$mac}}
+		</a>
+</p>
+<form action="?act=setting" method="post" accept-charset="utf-8">
+
+<div class="" style="float:left;padding-right:30px">
+
+
+
+<table align=" " border="0" cellspacing="0" class="table ">
+<tbody>
+
+	<tr>
+	<td align="right">Device Name</td>
+	<td align="left">
+		<input name="dev_name" value="{{$monitor->dev_name}}" size="50" type="text" mouseev="true" keyev="true" >
+	</td>
+</tr>
+
+<tr>
+	<td align="right">IP</td>
+	<td align="left">
+		<input name="ip_adress" value="{{$network['ip_adress']}} " size="30" type="text" mouseev="true" keyev="true" >
+	</td>
+</tr>
+<tr>
+	<td align="right">Mask</td>
+	<td align="left">
+		<input name="mask" value="{{$network['mask']}}" size="30" type="text"></td>
+</tr>
+<tr>
+	<td align="right">Gateway</td>
+	<td align="left">
+		<input name="gateway_id" value="{{$network['gateway_id']}}" size="30" type="text">
+	</td>
+</tr>
+ 
+<tr>
+	<td align="right">Primary DNS</td>
+	<td align="left">
+		<input name="pdns" value="{{$nameservers[0]}}" size="30" type="text"   >
+	</td>
+</tr>
+
+<tr>
+	<td align="right">Secondary DNS</td>
+	<td align="left">
+		<input name="sdns" value="{{$nameservers[1]}}" size="30" type="text"  >
+	</td>
+</tr>
+ 
+<tr>
+	<td align="right">* Frequency</td>
+	<td align="left">
+		<input name="freq" value="{{$freq}}" size="30" type="text">
+	</td>
+</tr> 
+ 
+</table >
+
+</div>
+
+<div class="setting"  style="float:left; ">
+
+<table  align=" " border="0" cellspacing="0" class="table">
+<tbody>
+
+
+<tr>
+	<td align="right">* Pool 1</td>
+	<td align="left">
+		<input name="pool_url1" value="{{$pool1->url}}" size="30" type="text"  >
+	</td>
+
+</tr>
+<tr>
+	<td align="right">* Worker 1</td>
+	<td align="left">
+		<input name="pool_worker1" value="{{$pool1->user}}" size="30" type="text"></td>
+</tr>
+<tr>
+	<td align="right">* Password 1</td>
+	<td align="left">
+		<input name="pool_passwd1" value="{{$pool1->pass}}" size="30" type="text">
+	</td>
+</tr>
+ 
+ 
+<tr>
+	<td align="right">* Pool 2</td>
+	<td align="left">
+		<input name="pool_url2" value="{{$pool2->url}}" size="30" type="text"  >
+	</td>
+
+</tr>
+<tr>
+	<td align="right">* Worker 2</td>
+	<td align="left">
+		<input name="pool_worker2" value="{{$pool2->user}}" size="30" type="text"></td>
+</tr>
+<tr>
+	<td align="right">* Password 2</td>
+	<td align="left">
+		<input name="pool_passwd2" value="{{$pool2->pass}}" size="30" type="text">
+	</td>
+</tr>
+
+<tr>
+	<td align="right">Auto Reboot (s)</td>
+	<td align="left">
+		<input name="reboot_time" value="{{$monitor->reboot_time}}" size="30" type="text">
+	</td>
+</tr> 
+ 
+ </tbody></table>
+
+</div>
+
+
+<div style=" width:50%; margin:0 auto;padding:0px;clear:both;" >
+
+<p style=" color:red;">* Needs to reboot</p>
+<input type="button" value="Refresh" onclick="window.location.href=''" class="btn">
+<input name="submit" value="Submit" type="submit"  class="btn btn-primary">
+</div>
+  
+</form>
+</div>
+ 
+
+{{include file="footer.html"}}
+ 

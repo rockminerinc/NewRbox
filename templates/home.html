@@ -1,0 +1,67 @@
+{{include file="header.html"}}
+ 
+ 
+
+<div id="content">
+<table class="table table-striped" style="width:90%">
+<tr style="font-weight:bold;"> 
+	<td>Elapsed</td><td>GHS av</td><td>GHS 5s</td><td>GHS 1m</td><td>GHS 5m</td><td>GHS 15m</td>  
+</tr>
+<tr >
+<td> {{$sumary['Elapsed']}}</td>         
+<td> {{($sumary['MHS av']*0.001)|string_format:"%.1f"}}</td>         
+<td> {{($sumary['MHS 5s']*0.001)|string_format:"%.1f"}}</td>         
+<td> {{($sumary['MHS 1m']*0.001)|string_format:"%.1f"}}</td>         
+<td> {{($sumary['MHS 5m']*0.001)|string_format:"%.1f"}}</td>         
+<td> {{($sumary['MHS 15m']*0.001)|string_format:"%.1f"}}</td>         
+  </tr>
+ 
+</table>
+
+<table class="table table-striped" style="width:90%">
+<tr style="font-weight:bold;"> 
+	<td>URL</td><td>Worker</td><td>Last Share Time</td>   
+</tr>
+	{{foreach $pools as $pool}}
+
+
+<tr >
+<td> {{$pool['URL']}}</td>         
+<td> {{$pool['User']}}</td>         
+<td> {{$pool['Last Share Time']}}</td>         
+      
+  </tr>
+ {{/foreach}}
+</table>
+
+
+<table class="table table-striped" style="width:90%">
+
+
+       <tr style="font-weight:bold;">
+       	<td width=50px>ID</td><td>Temperature</td><td>GHS av</td><td>GHS 5s</td><td>GHS 15m</td>
+       </tr>
+
+{{foreach $devs as $dev}}
+{{if $dev['Enabled'] == 'Y'}}
+  			<tr >
+ 
+ 			<td>{{$dev['PGA']+1}}</td>	
+ 			<td>{{$dev['Temperature']|string_format:"%d"}}</td>	
+ 			<td>{{($dev['MHS av']*0.001)|string_format:"%.1f"}}</td>	
+ 			<td>{{($dev['MHS 5s']*0.001)|string_format:"%.1f"}}</td>	
+ 			<td>{{($dev['MHS 15m']*0.001)|string_format:"%.1f"}}</td>	
+ 
+				 
+        </tr>      
+{{/if}}
+ {{/foreach}}
+ </table>
+
+
+</div>
+ 
+
+
+
+{{include file="footer.html"}}

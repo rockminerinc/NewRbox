@@ -1,0 +1,39 @@
+
+body { font-family:Verdana; font-size:14px; margin:0;}
+
+#container {margin:0 auto; width:99%;}
+#header { 
+	background: #2e7bcf url(../img/header-bg.jpg) 0 0 repeat-x;
+ 
+	padding:10px;
+	
+	   margin-bottom:5px;
+}
+#mainContent { margin-bottom:5px;margin-top: 60px;}
+#sidebar { float:left; width:200px; height:500px;  }
+#content {  
+margin:0 auto; 
+width:900px;
+
+}
+
+#ugraphdiv2 .dygraph-legend {
+width: 680px !important;
+left: 60px !important;
+}
+
+
+.WebUI {
+	float: right;
+	padding: 10px;
+
+}
+
+.table th, .table td {
+padding: 8px;
+line-height: 20px;
+text-align: left;
+vertical-align: top;
+border: 1px solid #ddd;
+border-left: 1px solid #ddd;
+}

@@ -1,0 +1,46 @@
+{{include file="header.html"}}
+
+
+ <div id="content">
+
+<form action="?act=monitor" method="post" accept-charset="utf-8">
+
+<table align=" " border="0" cellspacing="0">
+<tbody>
+<tr>
+	<td align="right">Device Name</td>
+	<td align="left">
+		<input name="dev_name" value="{{$monitor->dev_name}}" size="50" type="text" mouseev="true" keyev="true" >
+	</td>
+</tr>
+ 
+<tr>
+	<td align="right">RockHash URL</td>
+	<td align="left">
+		<a href="http://rockhash.com/m/{{$mac}}" class="btn btn-primary" target="_blank">
+			http://rockhash.com/m/{{$mac}}
+		</a>
+	</td>
+		</tr>
+
+<!--tr>
+	<td align="right">BTCKAN Device ID </td>
+	<td align="left">
+		<input name="btckan_id" value="{{$monitor->btckan_id}}" size="50" type="text"></td>
+</tr-->
+ 
+
+<td align="right"></td></tr>
+<tr>
+<td colspan="2" align="center">
+<input type="button" value="Refresh" onclick="window.location.href=''" class="btn">
+<input name="submit" value="Update" type="submit"  class="btn">
+</td>
+</tr></tbody></table>
+
+
+  
+</form>
+</div>
+
+{{include file="footer.html"}}
