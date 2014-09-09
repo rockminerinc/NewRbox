@@ -2,7 +2,7 @@
  
 <div id="content"  >
 <p style="text-align:">	 
-		<a href="http://rockhash.com/m/{{$mac}}"  target="_blank">
+		<a href="http://rockhash.com/m/{{$mac}}"  target="_blank"  class="hint--right" data-hint="Share link at RockHash.com">
 			http://rockhash.com/m/{{$mac}}
 		</a>
 </p>
@@ -16,14 +16,14 @@
 <tbody>
 
 	<tr>
-	<td align="right">Device Name</td>
+	<td align="right">Device Name(<a href="javascript:void(0)" class="hint--right" data-hint="The name showed at RockHash.com">?</a>)</td>
 	<td align="left">
 		<input name="dev_name" value="{{$monitor->dev_name}}" size="50" type="text" mouseev="true" keyev="true" >
 	</td>
 </tr>
 
 <tr>
-	<td align="right">IP</td>
+	<td align="right">IP(<a href="javascript:void(0)" class="hint--right" data-hint="This device's IP address">?</a>)</td>
 	<td align="left">
 		<input name="ip_adress" value="{{$network['ip_adress']}} " size="30" type="text" mouseev="true" keyev="true" >
 	</td>
@@ -55,7 +55,7 @@
 </tr>
  
 <tr>
-	<td align="right">* Frequency</td>
+	<td align="right">* Frequency(<a href="javascript:void(0)" class="hint--right" data-hint="Should be divisible by 10,such as 270/280/290">?</a>)</td>
 	<td align="left">
 		<input name="freq" value="{{$freq}}" size="30" type="text">
 	</td>
@@ -72,7 +72,7 @@
 
 
 <tr>
-	<td align="right">* Pool 1</td>
+	<td align="right">* Pool 1(<a href="javascript:void(0)" class="hint--right" data-hint="url:port;eg:us1.ghash.io:3333">?</a>)</td>
 	<td align="left">
 		<input name="pool_url1" value="{{$pool1->url}}" size="30" type="text"  >
 	</td>
@@ -92,7 +92,7 @@
  
  
 <tr>
-	<td align="right">* Pool 2</td>
+	<td align="right">* Pool 2(<a href="javascript:void(0)" class="hint--right" data-hint="url:port;eg:us1.ghash.io:3333">?</a>)</td>
 	<td align="left">
 		<input name="pool_url2" value="{{$pool2->url}}" size="30" type="text"  >
 	</td>
@@ -111,7 +111,7 @@
 </tr>
 
 <tr>
-	<td align="right">Auto Reboot (s)</td>
+	<td align="right">Auto Reboot(<a href="javascript:void(0)" class="hint--right" data-hint="Seconds to auto reboot.300 = 5 minutes.0 = never reboot">?</a>)</td>
 	<td align="left">
 		<input name="reboot_time" value="{{$monitor->reboot_time}}" size="30" type="text">
 	</td>
@@ -124,7 +124,7 @@
 
 <div style=" width:50%; margin:0 auto;padding:0px;clear:both;" >
 
-<p style=" color:red;">* Needs to reboot</p>
+<p style=" color:red;">* Needs to reboot after change</p>
 <input type="button" value="Refresh" onclick="window.location.href=''" class="btn">
 <input name="submit" value="Submit" type="submit"  class="btn btn-primary">
 </div>
