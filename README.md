@@ -1,7 +1,6 @@
 #Handbook for New R-BOX
 
-- faster and more simple
-- change /data,/cache,/template_c,/cache to 777
+
 
 ##Setting
 
