@@ -6,6 +6,8 @@
 
 <img src="setting.png" width="600px">
 
+<img src="setting2.png" width="600px">
+
 ##FAQ
 
 1. What's bitcoin?
